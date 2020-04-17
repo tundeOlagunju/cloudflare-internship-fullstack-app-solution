@@ -48,7 +48,9 @@ async function handleRequest(request) {
     }
     const response = await fetch(API_URL)
     const urls = await response.json()
+    //generate a random number with 50/50 chance
     const random = Math.floor(Math.random()*2)
+    
     let url = urls.variants[random]
     request = new Request(url, request) 
     res = await fetch(request) 
@@ -59,7 +61,7 @@ async function handleRequest(request) {
 
     res.headers.append("Set-Cookie", urlCookieHeader) 
     res.headers.append("Set-Cookie",randomCookieHeader)
-    
+
     return reWriter(random).transform(res)
 
 }
