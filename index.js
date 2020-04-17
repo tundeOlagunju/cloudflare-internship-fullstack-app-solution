@@ -39,6 +39,7 @@ addEventListener('fetch', event => {
 
 async function handleRequest(request) {
     let res
+    //Check Cookie for saved URL and random number
     const cookieUrl = getCookie(request, URL_COOKIE_NAME)
     const cookieRandom = getCookie(request, RANDOM_COOKIE_NAME)
     if(cookieUrl){
