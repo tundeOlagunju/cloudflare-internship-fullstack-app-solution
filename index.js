@@ -28,7 +28,7 @@ function reWriter (random){
     .on('p#description', { element:  e => e.setInnerContent(`How To Set Up Version ${random+1}.0`) })
     .on('a#url', { element: e => e.setInnerContent('Return to goal.com')})
     .on('a[href]', { element: e => {
-        e.setAttribute('href',"https://www.goal.com/en-ng")
+        e.setAttribute('href',"https://www.goal.com/")
     }})
     return htmlRewriter
 }
@@ -53,6 +53,7 @@ async function handleRequest(request) {
     request = new Request(url, request) 
     res = await fetch(request) 
     res = new Response(res.body, res)
+
     const urlCookieHeader = `${URL_COOKIE_NAME}=${url}; Expires=Wed, 21 Oct 2021 07:28:00 GMT; Path='/';`
     const randomCookieHeader = `${RANDOM_COOKIE_NAME}=${random}; Expires=Wed, 21 Oct 2021 07:28:00 GMT; Path='/';`
     res.headers.append("Set-Cookie", urlCookieHeader) 
