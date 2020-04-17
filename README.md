@@ -10,10 +10,10 @@ HTML Rewriter of Cloudworkers API is used to modify the web pages as desired
 
 ### Running The Project
 
-You can use [wrangler](https://github.com/cloudflare/wrangler) to generate a new Cloudflare Workers project based on this template by running the following command from your terminal:
+You can use [wrangler](https://github.com/cloudflare/wrangler) to generate a new Cloudflare Workers project based on this project by running the following command from your terminal:
 
 ```
-wrangler generate myapp https://github.com/cloudflare/worker-template-router
+wrangler generate myapp https://github.com/tundeOlagunju/cloudflare-internship-fullstack-app-solution
 ```
 
 Before publishing your code you need to edit `wrangler.toml` file and add your Cloudflare `account_id` - more information about publishing your code can be found [in the documentation](https://workers.cloudflare.com/docs/quickstart/configuring-and-publishing/).
