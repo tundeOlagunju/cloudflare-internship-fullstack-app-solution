@@ -1,0 +1,5 @@
+name = "my-router-app"
+type = "webpack"
+account_id = "ba5b63532317d52d0910334a64095a05"
+workers_dev = true
+
