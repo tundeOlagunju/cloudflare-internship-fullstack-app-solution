@@ -1,7 +1,7 @@
 const Router = require('./router')
 const URL_COOKIE_NAME = 'URL_COOKIE'
 const RANDOM_COOKIE_NAME = 'RANDOM_COOKIE'
-const URL = 'https://cfw-takehome.developers.workers.dev/api/variants'
+const API_URL = 'https://cfw-takehome.developers.workers.dev/api/variants'
 
 
 function getCookie(request, name) {
@@ -45,7 +45,7 @@ async function handleRequest(request) {
         res = await fetch(cookieUrl) 
         return reWriter(Number(cookieRandom)).transform(res)
     }
-    const response = await fetch(URL)
+    const response = await fetch(API_URL)
     const urls = await response.json()
     const random = Math.floor(Math.random()*2)
     let url = urls.variants[random]
