@@ -56,8 +56,10 @@ async function handleRequest(request) {
 
     const urlCookieHeader = `${URL_COOKIE_NAME}=${url}; Expires=Wed, 21 Oct 2021 07:28:00 GMT; Path='/';`
     const randomCookieHeader = `${RANDOM_COOKIE_NAME}=${random}; Expires=Wed, 21 Oct 2021 07:28:00 GMT; Path='/';`
+
     res.headers.append("Set-Cookie", urlCookieHeader) 
     res.headers.append("Set-Cookie",randomCookieHeader)
+    
     return reWriter(random).transform(res)
 
 }
