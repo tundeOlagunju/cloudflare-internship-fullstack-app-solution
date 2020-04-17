@@ -1,5 +1,5 @@
 ## Router Application
- A Faas serverless application built and deployed with Cloudflare Workers API. This project is a solution to the cloudflare internship application tasks. This project teaches me how to write applications with the Cloudflare Workers API, manage and develop them using the command-line tool Wrangler, and deploy them to the free workers.dev deployment playground.
+ A Faas serverless application built and deployed with Cloudflare Workers API. This project is a solution to the cloudflare internship application tasks. This project taught me how to write applications with the Cloudflare Workers API, manage and develop them using the command-line tool Wrangler, and deploy them to the free workers.dev deployment playground.
 
 
 ### Description
